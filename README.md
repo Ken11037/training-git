@@ -1,5 +1,62 @@
 # 研修用リポジトリ
 
+## ユーザー名
+
+各説明に出てくる「`{★ユーザー名}`」は自分のメールアドレスのユーザー名を使ってください。
+
+- メールアドレス `"taro.yamada@epkotsoftware.co.jp"` の例
+  - `{★ユーザー名}`: `taro.yamada`
+    - ブランチ名: `feature/taro.yamada`
+    - ユーザーディレクトリ名: `taro.yamada`
+
+## 環境構築
+
+- 以下の手順で構築してください（わからない場合は[環境構築詳細](#環境構築詳細)へ）
+  - リポジトリクローン
+    - リポジトリ: <https://github.com/epkotsoftware/training>
+  - 「`template`」ブランチから「`feature/{★ユーザー名}`」ブランチを作成
+  - 「[users/_template/](./users/_template/)」フォルダを「`users/{★ユーザー名}`」にコピーして`feature/{★ユーザー名}`ブランチにコミット
+  - 作成したブランチをGitHubへpush
+
+### 環境構築詳細
+
+- Windows での例
+  - 任意の場所に「`epkotsoftware`」フォルダー（ディレクトリ）を作成します。
+    - 例: `C:\Users\{Windowsユーザー名}\Documents\git\epkotsoftware`
+    ![new_folder.png](./images/new_folder.png)
+  - 作成したフォルダーを右クリックし、「`Git Bash Here`」を選択。
+    ![git_bash_here](./images/git_bash_here.png)
+  - 開かれた`Git Bash`上で上記コマンドを入力してEnter。
+
+```bash
+# GitHubのリポジトリをローカルに複製
+git clone https://github.com/epkotsoftware/training.git
+# 現在のディレクトリを training/users/ に変更
+cd training/users/
+# 現在のブランチから、ユーザーブランチを作成してチェックアウト
+git checkout -b feature/{★ユーザー名}
+# training/users/_template ディレクトリを training/users/{★ユーザー名} にコピー
+cp -r _template/ {★ユーザー名}/
+# コピーしたディレクトリをステージング
+git add .
+# ステージングしたファイルをコミット
+git commit -m "★任意のコメント"
+```
+
+ここまでの手順で「[epkotsoftware/training/users/{★ユーザー名}](./users/)」にフォルダーが出来ていることを確認してください。  
+問題なければ、以下のコマンドでpushします。
+
+```bash
+# GitHubへ作成したブランチを公開
+git push -u origin feature/{★ユーザー名}
+```
+
+- 実行例
+  - ![git_clone](./images/git_clone.png)
+- 確認
+  - 作成したブランチがGitHub上に出来ているか
+    - <https://github.com/epkotsoftware/training/branches/yours>
+
 ## 研修講師
 
 ### Osanai Seiya
