@@ -15,7 +15,7 @@
   - リポジトリクローン
     - リポジトリ: <https://github.com/epkotsoftware/training>
   - 「`template`」ブランチから「`feature/{★ユーザー名}`」ブランチを作成
-  - 「[users/_template/](./users/_template/)」フォルダを「`users/{★ユーザー名}`」にコピーして`feature/{★ユーザー名}`ブランチにコミット
+  - 「[users/_template/](./users/_template/)」フォルダを「`users/{★ユーザー名}`」にコピーして「`feature/{★ユーザー名}`」ブランチにコミット
   - 作成したブランチをGitHubへpush
 
 ### 環境構築詳細
@@ -24,9 +24,9 @@
   - 任意の場所に「`epkotsoftware`」フォルダー（ディレクトリ）を作成します。
     - 例: `C:\Users\{Windowsユーザー名}\Documents\git\epkotsoftware`
     ![new_folder.png](./images/new_folder.png)
-  - 作成したフォルダーを右クリックし、「`Git Bash Here`」を選択。
+  - 作成したフォルダーを右クリックし、「`Git Bash Here`」を選択してください。
     ![git_bash_here](./images/git_bash_here.png)
-  - 開かれた`Git Bash`上で上記コマンドを入力してEnter。
+  - 開かれた`Git Bash`上で以下のコマンドを1行ずつ入力してEnterを押してください（`#`から始まっているコメントは不要）。
 
 ```bash
 # GitHubのリポジトリをローカルに複製
@@ -54,7 +54,7 @@ git push -u origin feature/{★ユーザー名}
 - 実行例
   - ![git_clone](./images/git_clone.png)
 - 確認
-  - 作成したブランチがGitHub上に出来ているか
+  - 作成したブランチがGitHub上に出来ているか確認してください。
     - <https://github.com/epkotsoftware/training/branches/yours>
 
 ## 研修講師
