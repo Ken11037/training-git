@@ -5,9 +5,11 @@ COPY ./php.ini /usr/local/etc/php/
 COPY --from=composer:2.1.9 /usr/bin/composer /usr/bin/composer
 # apt(Advanced Package Tool) パッケージインストール
 # PDO driver インストール(mysql)
+# mod_rewrite 有効化
 RUN apt-get update && apt-get install -y \
     git \
     unzip \
     vim \
     zip \
-    && docker-php-ext-install pdo_mysql
+    && docker-php-ext-install pdo_mysql \
+    && a2enmod rewrite
