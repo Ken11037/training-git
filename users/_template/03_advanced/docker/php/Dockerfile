@@ -1,4 +1,13 @@
 FROM php:8.0.3-apache
+# composer php.iniをコピー
 COPY ./php.ini /usr/local/etc/php/
-
-RUN docker-php-ext-install pdo_mysql
+# composer インストール (マルチステージビルド)
+COPY --from=composer:2.1.9 /usr/bin/composer /usr/bin/composer
+# apt(Advanced Package Tool) パッケージインストール
+# PDO driver インストール(mysql)
+RUN apt-get update && apt-get install -y \
+    git \
+    unzip \
+    vim \
+    zip \
+    && docker-php-ext-install pdo_mysql
