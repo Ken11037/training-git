@@ -28,7 +28,6 @@ docker-compose -f users/{★ユーザー名}/03_advanced/docker/docker-compose-d
 
 - WEB ([htdocs](./htdocs/) 内に置いてあるPHPファイルが実行されます。)
   - <http://localhost:8001/index.php>
-  - <http://localhost:8001/sortable/index.php>
   - <http://localhost:8001/sortable2/index.php>
   - <http://localhost:8001/sortable3/index.php>
 - phpMyAdmin
@@ -62,12 +61,13 @@ CBCの研修内容にあわせて追加しています。
 
 ## PHP
 
-PDO設定
+PDO設定 接続情報は[`.env`](./docker/.env)に記載しています。  
+**※ CBCと`host`の値が異なるので注意。**
 
 ```php
-define('DB_DNS', 'mysql:host=mysql; dbname={★DB名}; charset=utf8');
+define('DB_DNS', 'mysql:host=mysql; dbname={★DB名}; charset=utf8'); // host = .env「DB_HOST_NAME」の値
 define('DB_USER', 'root');
-define('DB_PASSWORD', 'root');
+define('DB_PASSWORD', 'root'); // .env 「DB_ROOT_PASSWORD」の値
 
 $dbh = new PDO(DB_DNS, DB_USER, DB_PASSWORD);
 ```
