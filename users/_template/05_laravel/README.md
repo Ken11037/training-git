@@ -56,11 +56,6 @@ composer install
 ```bash
 # ■ WEBサーバーで入力
 cd /var/www/app
-# 「.env」ファイル
-## 「.env.dev」ファイルを「.env」にコピー
-cp .env.dev .env
-## 「.env」ファイルの APP_KEY 生成
-php artisan key:generate
 # storage ディレクトリに読み取り・書き込み権限を与える（storage内に書き込み（ログ出力時等）に「Permission denied」のエラーが発生する）
 chmod -R 777 storage/
 ```
@@ -81,20 +76,6 @@ chmod -R 777 storage/
   - ユーザーID: `root`
   - パスワード: `root`  ～  `DB_ROOT_PASSWORD` 参照
   - ポート番号: `3307`  ～  `PORT_DB` 参照
-
-### envファイル設定
-
-Laravelの「`.env`」ファイルの設定を確認してください。  
-DB設定については「`.env.dev`」に記載していて、それをコピーした「`.env`」にも既に記載されていますが、確認してください。
-
-```ini
-DB_CONNECTION=mysql
-DB_HOST=mysql
-DB_PORT=3306
-DB_DATABASE=cbc_laravel
-DB_USERNAME=root
-DB_PASSWORD=root
-```
 
 ### データベースの確認
 
