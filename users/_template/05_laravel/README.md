@@ -79,4 +79,4 @@ chmod -R 777 storage/
 
 ### データベースの確認
 
-「[`docker/.env`](./docker/.env)」ファイルの`DB_DATABASE`のデータベースが実際に追加されていることを確認してください(`cbc_laravel`)。
+「[`app/.env`](./app/.env)」ファイルの`DB_DATABASE`のデータベースが実際に追加されていることを確認してください(`cbc_laravel`)。
