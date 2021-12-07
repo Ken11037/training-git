@@ -116,6 +116,61 @@ DB_PASSWORD=root
 
 「[`docker/.env`](./docker/.env)」ファイルの`DB_DATABASE`のデータベースが実際に追加されていることを確認してください(`cbc_laravel`)。
 
+### 日本設定
+
+#### 言語ファイルダウンロード
+
+「[`resources/lang/`](./app/resources/lang/)」に「`ja`」ディレクトリが生成され4つの言語ファイルが追加されます。
+
+```bash
+# ■ WEBサーバーで入力
+cd /var/www/app
+php -r "copy('https://readouble.com/laravel/8.x/ja/install-ja-lang-files.php', 'install-ja-lang.php');"
+php -f install-ja-lang.php
+php -r "unlink('install-ja-lang.php');"
+```
+
+- auth.php言語ファイル <https://readouble.com/laravel/8.x/ja/auth-php.html>
+- pagination.php言語ファイル <https://readouble.com/laravel/8.x/ja/pagination-php.html>
+- passwords.php言語ファイル <https://readouble.com/laravel/8.x/ja/passwords-php.html>
+- validation.php言語ファイル <https://readouble.com/laravel/8.x/ja/validation-php.html>
+
+#### app.php
+
+| Key | Value | 備考 |
+| --- | :---: | --- |
+| timezone | `Asia/Tokyo` | デフォルト: `UTC` |
+| locale  | `ja` | デフォルト: `en` |
+| fallback_locale' | `en` | デフォルト: `en`<br>locale の言語が見つからない場合に適用する言語<br>デフォルトの`en`を指定するのが良い |
+| faker_locale | `ja_JP` | デフォルト: `en_US` |
+
+### パッケージ
+
+#### Laravel Debugbar
+
+Laravelで作成した画面の下にデバッグバーが表示され、様々な情報が見れるようになります。
+
+- GitHub
+  - <https://github.com/barryvdh/laravel-debugbar>
+  - Release
+    - <https://github.com/barryvdh/laravel-debugbar/releases>
+
+```bash
+# ■ WEBサーバーで入力
+cd /var/www/app
+# composer.json にパッケージを追加し、インストールする。 「--dev」をつけることで開発環境のみに適用。
+composer require --dev barryvdh/laravel-debugbar
+# config/debugbar.php を追加。
+php artisan vendor:publish --provider="Barryvdh\Debugbar\ServiceProvider"
+```
+
+#### その他
+
+以下が参考になりそうです。
+
+- Laravelで便利なおすすめComposerパッケージ一覧
+  - <https://qiita.com/minato-naka/items/4b47a22ba07b2604ce02>
+
 ### スターターキット
 
 #### Laravel UI
