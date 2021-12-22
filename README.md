@@ -27,6 +27,9 @@
 - 以下の手順で構築してください（わからない場合は[環境構築詳細](#環境構築詳細)へ）
   - リポジトリクローン
     - リポジトリ: <https://github.com/epkotsoftware/training>
+  - Git設定
+    - 「`git config --local core.autocrlf input`」を実行し設定を行う。
+    - 「`git config --local core.autocrlf`」を実行し設定されていることを確認する。
   - 「`template`」ブランチから「`feature/{★ユーザー名}`」ブランチを作成
   - 「[users/_template/](./users/_template/)」フォルダを「`users/{★ユーザー名}`」にコピーして「`feature/{★ユーザー名}`」ブランチにコミット
   - 作成したブランチをGitHubへpush
@@ -44,6 +47,10 @@
 ```bash
 # GitHubのリポジトリをローカルに複製
 git clone https://github.com/epkotsoftware/training.git
+# Gitコンフィグ設定（core.autocrlf に「input」を設定）
+git config --local core.autocrlf input
+# Gitコンフィグ設定確認（「input」が表示されること）
+git config --local core.autocrlf
 # 現在のディレクトリを training/users/ に変更
 cd training/users/
 # 現在のブランチから、ユーザーブランチを作成してチェックアウト
