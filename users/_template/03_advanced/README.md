@@ -35,6 +35,8 @@ docker-compose -f users/{★ユーザー名}/03_advanced/docker/docker-compose-d
 
 #### 使用しているイメージについて
 
+Dockerで使用しているイメージは以下になります。  
+`docker-compose`コマンドにより既に入っています。  
 phpMyAdmin については必須ではありませんが  
 CBCの研修内容にあわせて追加しています。
 
@@ -49,7 +51,8 @@ CBCの研修内容にあわせて追加しています。
 
 ### SQLクライアント
 
-無料、汎用的に使える、SQL自動生成、ER図作成等も出来る `A5:SQL Mk-2` がおすすめです。
+導入は任意です。  
+無料、汎用的に使える、SQL自動生成、ER図作成等も出来る `A5:SQL Mk-2` がおすすめです。  
 
 - `A5:SQL Mk-2`
   - <https://a5m2.mmatsubara.com/>
@@ -61,6 +64,7 @@ CBCの研修内容にあわせて追加しています。
 
 ## PHP
 
+研修を進めていくと`PDO`について触れます。  
 PDO設定 接続情報は[`.env`](./docker/.env)に記載しています。  
 **※ CBCと`host`の値が異なるので注意。**
 
