@@ -1,0 +1,12 @@
+version: "3.1"
+
+services:
+  ubuntu:
+    container_name: "${NAME_PREFIX}-ubuntu"
+    hostname: "${NAME_PREFIX}-ubuntu"
+    build:
+      context: ./ubuntu
+    tty: true
+    volumes:
+      - "../work:/mnt/work"
+    restart: always
