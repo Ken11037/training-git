@@ -14,9 +14,11 @@ PHPのDB接続設定等も異なりますのでご注意ください。
 ### Docker
 
 Dockerインストール後に [03_advanced/docker/docker-compose-dev.yml](./docker/docker-compose-dev.yml) を指定して `docker-compose` を実行します。  
-カレントディレクトリの場所によりパスの指定が変わります。
+カレントディレクトリの場所によりパスの指定が変わります。  
+コマンドは以下になります。  
 
 ```bash
+# ■ Git Bash・PowerShell等で実行
 # docker-compose-dev.yml ファイルを指定して実行
 docker-compose -f users/{★ユーザー名}/03_advanced/docker/docker-compose-dev.yml up -d
 ```
@@ -86,10 +88,12 @@ MySQL をコマンドで実行可能。
   - <https://dev.mysql.com/doc/refman/8.0/ja/connecting.html>
 
 ```bash
+# ■ Git Bash・PowerShell等で実行
 docker exec -it training-mysql bash
 ```
 
 ```bash
+# ■ Git Bash・PowerShell等で実行（training-mysql内）
 mysql -u root -proot
 ```
 
@@ -101,6 +105,7 @@ PHPをコマンドで実行してみたり、Linuxのコマンド練習等にお
 研修外ですが `composer`・`vim`(vi コマンドが使えるようになっている)等もインストールしてあります。
 
 ```bash
+# ■ Git Bash・PowerShell等で実行
 docker exec -it training-web bash
 ```
 
@@ -110,7 +115,7 @@ docker exec -it training-web bash
 
 #### composer
 
-**こちらはPHP課題が終わった後に学習してください。**
+**こちらはPHP課題が終わった後に任意で学習してください。**
 
 - PHPのライブラリ管理ツール「Composer」入門
   - <https://weblabo.oscasierra.net/php-composer-1/>
