@@ -47,12 +47,14 @@
 ```bash
 # GitHubのリポジトリをローカルに複製
 git clone https://github.com/epkotsoftware/training.git
+# 現在のディレクトリを training に変更
+cd training
 # Gitコンフィグ設定（core.autocrlf に「input」を設定）
 git config --local core.autocrlf input
 # Gitコンフィグ設定確認（「input」が表示されること）
 git config --local core.autocrlf
 # 現在のディレクトリを training/users/ に変更
-cd training/users/
+cd users
 # 現在のブランチから、ユーザーブランチを作成してチェックアウト
 git checkout -b feature/{★ユーザー名}
 # training/users/_template ディレクトリを training/users/{★ユーザー名} にコピー
