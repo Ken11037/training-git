@@ -43,6 +43,8 @@
   - 作成したフォルダーを右クリックし、「`Git Bash Here`」を選択してください。
     ![git_bash_here](./images/git_bash_here.png)
   - 開かれた`Git Bash`上で以下のコマンドを1行ずつ入力してEnterを押してください（`#`から始まっているコメントは不要）。
+    - **初回の「git clone」実行時にトークンが求められますので予めご用意ください。**
+      - [GitHubアカウント作成](https://epkotsoftware.github.io/github.html#githubアカウント作成)
 
 ```bash
 # GitHubのリポジトリをローカルに複製
@@ -78,6 +80,20 @@ git push -u origin feature/{★ユーザー名}
 - 確認
   - 作成したブランチがGitHub上に出来ているか確認してください。
     - <https://github.com/epkotsoftware/training/branches/yours>
+
+## 社内開発
+
+研修終了後（自己学習）に社内で開発しているシステム（提案止まり含む）の
+リポジトリにアクセス出来るようになります。  
+
+- 技術者マッチングサイトの開発
+  - <https://github.com/epkotsoftware/dev-it-matching>
+- 勤怠管理・労務管理システムの開発
+  - <https://github.com/epkotsoftware/internal-system>
+- 助成金申請向けWeb診断サイトの開発
+  - <https://github.com/epkotsoftware/dev-subsidy>
+- 薬剤師会向けWeb報告システムの開発
+  - <https://github.com/epkotsoftware/dev-proposal/tree/main/pre-avoid>
 
 ## 研修講師
 
