@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y \
     vim \
     zip \
     libicu-dev \
-    && docker-php-ext-install pdo_mysql intl \
+    && docker-php-ext-install pdo_mysql mysqli intl \
     && a2enmod rewrite
 
 # DocumentRoot 変更
