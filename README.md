@@ -15,6 +15,8 @@
   - Windowsの場合は「OneDrive」、OneDriveのアイコンがついていない場所にする。
     - まるに緑チェックなに？｜OneDrive-アイコンの意味
       - <https://pc119.toyama.jp/work/%E3%81%BE%E3%82%8B%E3%81%AB%E7%B7%91%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%81%AA%E3%81%AB%EF%BC%9F%EF%BD%9Conedrive-%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3%E3%81%AE%E6%84%8F%E5%91%B3/>
+    - デスクトップ等もOneDrive管理になりますのでご注意ください。
+    - よくわからない場合、「`C:\Users\{自分のWindowsユーザー名}\Documents`」配下に作ることをおすすめします。
   - Macの場合は「iCloud Drive」、iCloudを使用していない場所にする。
     - <https://support.apple.com/ja-jp/HT204025>
   - その他のクラウドストレージ、ご自身で設定しているはずなので説明は割愛します。
@@ -94,6 +96,8 @@ git push -u origin feature/{★ユーザー名}
   - <https://github.com/epkotsoftware/dev-subsidy>
 - 薬剤師会向けWeb報告システムの開発
   - <https://github.com/epkotsoftware/dev-proposal/tree/main/pre-avoid>
+- 顧客管理システムの開発
+  - <https://github.com/epkotsoftware/dev-proposal/tree/main/dev-survey-management-system>
 
 ## 研修講師
 
