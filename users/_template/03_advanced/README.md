@@ -13,13 +13,13 @@ PHPのDB接続設定等も異なりますのでご注意ください。
 
 ### Docker
 
-Dockerインストール後に [03_advanced/docker/docker-compose-dev.yml](./docker/docker-compose-dev.yml) を指定して `docker-compose` を実行します。  
-カレントディレクトリの場所によりパスの指定が変わります。  
-コマンドは以下になります。  
+Dockerインストール後に [03_advanced/docker/docker-compose-dev.yml](./docker/docker-compose-dev.yml) を指定して `docker-compose` を実行します。
 
 ```bash
 # ■ Git Bash・PowerShell等で実行
-# docker-compose-dev.yml ファイルを指定して実行
+#   pwdコマンドで現在のカレントディレクトリが training になっていることを確認
+pwd
+#   docker-compose-dev.yml ファイルを指定して実行
 docker-compose -f users/{★ユーザー名}/03_advanced/docker/docker-compose-dev.yml up -d
 ```
 
@@ -34,6 +34,18 @@ docker-compose -f users/{★ユーザー名}/03_advanced/docker/docker-compose-d
   - <http://localhost:8001/sortable3/index.php>
 - phpMyAdmin
   - <http://localhost:8888>
+
+##### Webサーバーのディレクトリについて
+
+ローカルの「[htdocs](./htdocs/)」 と Webサーバーの「/var/www/html」は
+同期しており  
+ローカルで編集するとWebサーバー上のファイルも更新されます。  
+[docker-compose-dev.yml](./docker/docker-compose-dev.yml) の以下の同期設定で行っています。
+
+```yml
+    volumes:
+      - "../htdocs:/var/www/html"
+```
 
 #### 使用しているイメージについて
 
