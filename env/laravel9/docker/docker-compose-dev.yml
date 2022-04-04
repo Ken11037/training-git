@@ -15,6 +15,7 @@ services:
     working_dir: /var/www/app
     restart: always
   db:
+    platform: linux/x86_64 # M1チップ対応
     container_name: "${NAME_PREFIX}-mysql"
     hostname: ${DB_HOST_NAME}
     image: mysql:8.0.28
