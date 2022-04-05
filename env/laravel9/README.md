@@ -12,7 +12,7 @@ Dockerを使って環境を構築します。
 
 ### 開発環境について
 
-- ソースコードについては2022/02/15時点で「`composer create-project laravel/laravel {ディレクトリ名}`」コマンドで生成したものになります。
+- ソースコードについては2022/04/05時点で「`composer create-project laravel/laravel {ディレクトリ名}`」コマンドで生成したものになります。
   - <https://laravel.com/docs/9.x/installation>
   - 日本語(Laravel8)
     - <https://readouble.com/laravel/8.x/ja/installation.html>
