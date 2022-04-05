@@ -17,4 +17,3 @@ RUN apt-get update && apt-get install -y \
 
 # DocumentRoot 変更
 RUN sed -i 's!/var/www/html!/var/www/app/public!g' /etc/apache2/sites-available/000-default.conf
-

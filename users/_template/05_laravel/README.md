@@ -17,6 +17,11 @@ docker-compose -f users/{★ユーザー名}/05_laravel/docker/docker-compose-de
 
 #### 使用しているDockerイメージ
 
+Dockerで使用しているイメージは以下になります。  
+`docker-compose`コマンドにより既に入っています。  
+phpMyAdmin については必須ではありませんが  
+CBCの研修内容にあわせて追加しています。
+
 - PHP (`php:<version>-apache`)
   - <https://hub.docker.com/_/php?tab=tags>
   - composer (マルチステージビルドで使用しています)

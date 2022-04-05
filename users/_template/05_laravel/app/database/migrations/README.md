@@ -1,3 +1,3 @@
 # Laravel Database: Migrations
 
-- <https://readouble.com/laravel/8.x/ja/migrations.html>
+- <https://readouble.com/laravel/9.x/ja/migrations.html>
