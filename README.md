@@ -2,7 +2,7 @@
 
 ## ユーザー名
 
-各説明に出てくる「`{★ユーザー名}`」は自分のメールアドレスのユーザー名を使ってください。
+各説明に出てくる「`{★ユーザー名}`」は自分のエプコットメールアドレスのユーザー名（@マークの左）を使ってください。
 
 - メールアドレス `"taro.yamada@epkotsoftware.co.jp"` の例
   - `{★ユーザー名}`: `taro.yamada`
@@ -40,13 +40,40 @@
 
 - Windows での例
   - 任意の場所に「`epkotsoftware`」フォルダー（ディレクトリ）を作成します。
-    - 例: `C:\Users\{Windowsユーザー名}\Documents\git\epkotsoftware`
+    - 例: `C:\Users\{Windowsユーザー名}\Documents\git\epkotsoftware`  
     ![new_folder.png](./images/new_folder.png)
-  - 作成したフォルダーを右クリックし、「`Git Bash Here`」を選択してください。
+  - 作成したフォルダーを右クリックし、「`Git Bash Here`」を選択してください。  
     ![git_bash_here](./images/git_bash_here.png)
-  - 開かれた`Git Bash`上で以下のコマンドを1行ずつ入力してEnterを押してください（`#`から始まっているコメントは不要）。
-    - **初回の「git clone」実行時にトークンが求められますので予めご用意ください。**
-      - [GitHubアカウント作成](https://epkotsoftware.github.io/github.html#githubアカウント作成)
+- Mac での例
+  - 任意の場所に「`epkotsoftware`」フォルダー（ディレクトリ）を作成します。
+    - 例: `/Users/{Macユーザー名}/git/epkotsoftware`
+    - 参考: Finderでホームを表示
+      - <https://dtmmethod.com/mac-finder-home>
+  - 作成したフォルダーのメニューを出し、「`フォルダに新規ターミナル`」を選択してください。  
+
+GitBash(ターミナル)で`pwd`コマンドを入力してEnterを押すと  
+現在のディレクトリのパスが見れます。
+
+```bash
+epkot@epkot epkotsoftware % pwd
+/Users/epkot/git/epkotsoftware
+epkot@epkot epkotsoftware % 
+```
+
+#### コマンド
+
+GitBash(Windows)またはターミナル(Mac)でコマンドを1行ずつ入力してEnterを押してください（`#`から始まっているコメントは不要）。
+
+- **初回の「git clone」実行時にトークンが求められますので予めご用意ください。**
+  - [GitHubアカウント作成](https://epkotsoftware.github.io/github.html#githubアカウント作成)
+  - Macの場合、トークンの入力画面ではなく、以下のようにUsername、Passwordが求められます。
+
+    ```bash
+    Username for 'https://github.com':  ★GitHubユーザー名を入力　例:taro-yamada-epkotsoftware
+    Password for 'https://seiya-osanai-epkotsoftware@github.com': ★トークンを入力　※入力しても見えないので注意
+    ```
+
+- `{★ユーザー名}`はルールが決まっていますのでご注意ください（[ユーザー名](#ユーザー名)参照）
 
 ```bash
 # GitHubのリポジトリをローカルに複製
