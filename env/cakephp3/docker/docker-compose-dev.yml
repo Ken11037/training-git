@@ -10,6 +10,9 @@ services:
       - "${IP}:${PORT_WEB}:80"
     volumes:
       - "../root:/var/www/root"
+      - "../root/vendor:/var/www/root/vendor:delegated"
+      - "../root/logs:/var/www/root/logs:delegated"
+      - "../root/tmp:/var/www/root/tmp:delegated"
     working_dir: /var/www/root
     restart: always
   db:
