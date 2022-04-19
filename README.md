@@ -64,22 +64,33 @@ epkot@epkot epkotsoftware %
 
 GitBash(Windows)またはターミナル(Mac)でコマンドを1行ずつ入力してEnterを押してください（`#`から始まっているコメントは不要）。
 
-- **初回の「git clone」実行時にトークンが求められますので予めご用意ください。**
-  - [GitHubアカウント作成](https://epkotsoftware.github.io/github.html#githubアカウント作成)
-  - Macの場合、トークンの入力画面ではなく、以下のようにUsername、Passwordが求められます。
+##### git clone
 
-    ```bash
-    Username for 'https://github.com':  ★GitHubユーザー名を入力　例:taro-yamada-epkotsoftware
-    Password for 'https://{自分のGitHubユーザー名}@github.com': ★トークンを入力　※入力しても見えないので注意
-    ```
+初めてgitを触る場合、トークンの入力が求められるので準備してください。  
 
-- `{★ユーザー名}`はルールが決まっていますのでご注意ください（[ユーザー名](#ユーザー名)参照）
+- トークンの準備（他者には見せないようにご注意ください）
+  - <https://epkotsoftware.github.io/github.html#トークン>
+
+トークンの準備が出来たら以下のコマンドを実行します。  
+実行後トークンの入力が求められるかと思います。  
 
 ```bash
 # GitHubのリポジトリをローカルに複製
 git clone https://github.com/epkotsoftware/training.git
+```
+
+##### ユーザーディレクトリ作成
+
+- `{★ユーザー名}`はルールが決まっていますのでご注意ください（[ユーザー名](#ユーザー名)参照）
+  - 例
+    - ブランチ名: `feature/taro.yamada`
+    - ユーザーディレクトリ名: `taro.yamada`
+
+```bash
 # 現在のディレクトリを training に変更
 cd training
+# パスの確認 「epkotsoftware/training」が含まれること
+pwd
 # Gitコンフィグ設定（core.autocrlf に「input」を設定）
 git config --local core.autocrlf input
 # Gitコンフィグ設定確認（「input」が表示されること）
