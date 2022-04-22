@@ -1,2 +1,2 @@
 -- DB生成「codeigniter」
-CREATE DATABASE `ci4`;
+CREATE DATABASE `ci3`;

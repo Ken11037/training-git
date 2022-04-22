@@ -15,6 +15,6 @@ RUN apt-get update && apt-get install -y \
     && a2enmod rewrite
 
 # DocumentRoot 変更
-RUN sed -i 's!/var/www/html!/var/www/root/public!g' /etc/apache2/sites-available/000-default.conf
+RUN sed -i 's!/var/www/html!/var/www/root!g' /etc/apache2/sites-available/000-default.conf
 # ServerName 設定
 RUN sed -i 's!#ServerName www.example.com!ServerName WebServer!g' /etc/apache2/sites-available/000-default.conf
