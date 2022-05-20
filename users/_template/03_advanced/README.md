@@ -13,7 +13,18 @@ PHPのDB接続設定等も異なりますのでご注意ください。
 
 ### Docker
 
-Dockerインストール後に [03_advanced/docker/docker-compose-dev.yml](./docker/docker-compose-dev.yml) を指定して `docker-compose` を実行します。
+Docker で以下の環境を構築します。
+
+- [PlantUML](https://www.plantuml.com/plantuml/umla/SoWkIImgAStDuKhEoIzDKN39JyvEBL9GjdHnTdOrKAZcKb38oqz9LIXFJO8nK-2iWem2tqh7bDpCFAvQBgW1mO4-ZvlMFsvU-RXfoUEcHO-RDpzkxdZSjFTnyrGWGq7P3GWC3A2A7pTF0wjSzhXf6roA2qLKjxH0rmvalPL2JdvoOav6Vd69bOM1WQ56W7zGI7o0Hu0cDWq8fw7e0mAuFjz8HnTVJpzDBW9ELW0Qbu9YlR6nWHd461SdJIukeEDWQd8hYmjpD5oSuZtyWqFY_HnzNJN1ghaGxb7GpKbDAo6atY4rBmKOAm00)  
+  ![Dockerネットワーク図](./images/docker-network.svg)  
+
+- Docker 例（今回の構成に近い構築例）
+  - <https://epkotsoftware.github.io/training/docker/example/>  
+    ※ 必須ではないので参考までに
+
+#### 構築
+
+Docker Desktopインストール後に自身のユーザーディレクトリ内の [03_advanced/docker/docker-compose-dev.yml](./docker/docker-compose-dev.yml) を指定して `docker-compose` を実行します。
 
 ```bash
 # ■ Git Bash・PowerShell等で実行
