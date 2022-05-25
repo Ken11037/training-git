@@ -19,6 +19,12 @@ Docker Desktopをインストールしてください。
 - Docker (参考情報)
   - <https://epkotsoftware.github.io/training/docker/>
 
+#### .env
+
+各名称・ポート設定が可能です。  
+IPとポートが重複すると、コンテナが起動しないので  
+自身の環境に合わせて設定を変えてください。
+
 #### 構成
 
 - Docker 例 (参考情報)
