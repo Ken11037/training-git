@@ -1,0 +1,7 @@
+all:
+  doctrine:
+    class: sfDoctrineDatabase
+    param:
+      dsn: 'mysql:host=env-symfony1_4-db-host;port=3306;dbname=symfony_db'
+      username: root
+      password: root
