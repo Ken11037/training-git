@@ -31,7 +31,18 @@ Dockerを使って環境を構築します。
 以下のコマンドを実行します（[docker/docker-compose-dev.yml](./docker/docker-compose-dev.yml) ファイルを指定）。
 
 ```bash
-docker-compose -f docker/docker-compose-dev.yml up -d
+docker-compose -f docker-compose.yml up -d
+```
+
+以下のコマンドを実行します。
+
+```bash
+$ # ターミナルで実行
+$ ## ls コマンドで docker-compose.yml があるか確認
+$ ls
+README.md               docker                  docker-compose.yml      root
+$ ## docker-compose で環境構築  ※ 時間がかかるので注意
+$ docker-compose up -d
 ```
 
 #### 使用しているDockerイメージ
@@ -72,7 +83,7 @@ composer install
 
 ```bash
 # ■ WEBサーバーで入力
-cd /var/www/app
+cd /var/www/root
 # 「.env」ファイル
 ## 「.env.dev」ファイルを「.env」にコピー
 cp .env.dev .env
