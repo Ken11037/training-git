@@ -55,6 +55,7 @@ GitBash(ターミナル)で`pwd`コマンドを入力してEnterを押すと
 現在のディレクトリのパスが見れます。
 
 ```bash
+epkot@epkot epkotsoftware % # Macのターミナルの例
 epkot@epkot epkotsoftware % pwd
 /Users/epkot/git/epkotsoftware
 epkot@epkot epkotsoftware % 
@@ -124,7 +125,7 @@ git push -u origin feature/{★ユーザー名}
 
 ## 社内開発
 
-研修終了後（自己学習）に社内で開発しているシステム（提案止まり含む）の
+研修終了後（自己学習）に社内で開発しているシステム（提案止まり含む）の  
 リポジトリにアクセス出来るようになります。  
 
 - 技術者マッチングサイトの開発
@@ -139,6 +140,12 @@ git push -u origin feature/{★ユーザー名}
   - <https://github.com/epkotsoftware/dev-proposal/tree/main/dev-survey-management-system>
 - 英文試験問題生成プログラムの開発
   - <https://github.com/epkotsoftware/dev-proposal/tree/main/dev-testmaker>
+
+設計書のテンプレートは、以下に入っています。  
+内部開発案件の設計書を試しに作ってみましょう。
+
+- 設計書のテンプレート・例
+  - <https://github.com/epkotsoftware/dev-proposal/tree/main/template/docs>
 
 ## 研修講師
 
@@ -160,3 +167,6 @@ git push -u origin feature/{★ユーザー名}
     - ハンディーターミナルアプリ
   - 言語
     - PHP、JavaScript、C++、Java、C#、VB.Net、VBA、VB6、Objective-C
+- paizaランク: S
+  - S007:データヒストグラム
+    - <https://paiza.jp/challenges/share/aMxI67x_JMR11X__1hCPMP6hwjXNx35CHC6xfMwgOyw?campaign=127&source=social>
