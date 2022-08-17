@@ -16,4 +16,4 @@ git branch
 
 Git Bash を使用している場合はディレクトリパスの後ろに「`(ブランチ名)`」が表示されます。
 
-![git_branch](./images/git_branch.png)
+![git_branch](./../../../images/01_beginner/git_branch.png)

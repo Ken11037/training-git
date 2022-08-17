@@ -16,7 +16,7 @@ PHPのDB接続設定等も異なりますのでご注意ください。
 Docker で以下の環境を構築します。
 
 - [PlantUML](https://www.plantuml.com/plantuml/umla/SoWkIImgAStDuKhEoIzDKN39JyvEBL9GjdHnTdOrKAZcKb38oqz9LIXFJO8nK-2iWem2tqh7bDpCFAvQBgW1mO4-ZvlMFsvU-RXfoUEcHO-RDpzkxdZSjFTnyrGWGq7P3GWC3A2A7pTF0wjSzhXf6roA2qLKjxH0rmvalPL2JdvoOav6Vd69bOM1WQ56W7zGI7o0Hu0cDWq8fw7e0mAuFjz8HnTVJpzDBW9ELW0Qbu9YlR6nWHd461SdJIukeEDWQd8hYmjpD5oSuZtyWqFY_HnzNJN1ghaGxb7GpKbDAo6atY4rBmKOAm00)  
-  ![Dockerネットワーク図](./images/docker-network.svg)  
+  ![Dockerネットワーク図](./../../../images/03_advanced/docker-network.svg)  
 
 - Docker 例（今回の構成に近い構築例）
   - <https://epkotsoftware.github.io/training/docker/example/>  
@@ -35,7 +35,7 @@ docker-compose -f users/{★ユーザー名}/03_advanced/docker/docker-compose-d
 ```
 
 - メールアドレスが「`"taro.yamada@epkotsoftware.co.jp`」、カレントディレクトリが「`training`」の例
-  - ![docker-compose](./images/docker-compose.png)
+  - ![docker-compose](./../../../images/03_advanced/docker-compose.png)
 
 #### 確認
 
@@ -149,7 +149,7 @@ docker exec -it training-web bash
 基本は「`vendor`」ディレクトリはGit管理外（コミット対象外）と  
 チーム開発をする際は各自、`composer install`を行います。
 
-![composer-install](./images/composer-install.png)
+![composer-install](./../../../images/03_advanced/composer-install.png)
 
 - パッケージは以下で検索が出来ます。
   - <https://packagist.org/>
