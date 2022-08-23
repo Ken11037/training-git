@@ -63,7 +63,8 @@ epkot@epkot epkotsoftware %
 
 #### コマンド
 
-GitBash(Windows)またはターミナル(Mac)でコマンドを1行ずつ入力してEnterを押してください（`#`から始まっているコメントは不要）。
+GitBash(Windows)またはターミナル(Mac)でコマンドを1行ずつ入力してEnterを押してください（`#`から始まっているコメントは不要）。  
+GitBashアプリの場合、コマンドをペーストするショートカットキーが `Ctrl+V` ではないので、右クリックして貼り付けてください。
 
 ##### git clone
 
