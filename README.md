@@ -101,8 +101,10 @@ git config --local core.autocrlf
 # 現在のディレクトリを training/users/ に変更
 cd users
 # 現在のブランチから、ユーザーブランチを作成してチェックアウト
+#   ブランチ名例: feature/taro.yamada
 git checkout -b feature/{★ユーザー名}
 # training/users/_template ディレクトリを training/users/{★ユーザー名} にコピー
+#   ユーザーディレクトリ名例: `taro.yamada`
 cp -r _template/ {★ユーザー名}/
 # コピーしたディレクトリをステージング
 git add .
@@ -123,6 +125,11 @@ git push -u origin feature/{★ユーザー名}
 - 確認
   - 作成したブランチがGitHub上に出来ているか確認してください。
     - <https://github.com/epkotsoftware/training/branches/yours>
+
+## 禁止事項
+
+- [users](./users/)の自分のユーザーディレクト以外の変更を禁止します。
+  - [users/README.md](./users/README.md) にも記載しています。
 
 ## 社内開発
 
