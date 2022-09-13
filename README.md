@@ -98,9 +98,18 @@ GitBash(ターミナル)は閉じましょう。
 
 ---
 
-### ユーザーディレクトリ作成
+### ユーザーブランチ・ディレクトリ作成
 
-ユーザーディレクトリ(フォルダー)を作成します  
+ユーザーブランチ及び、ユーザーディレクトリ(フォルダー)を作成します  
+
+```mermaid
+%%{init: {'gitGraph':{'mainBranchName':'template','rotateCommitLabel':false}}}%%
+gitGraph
+commit id:"templateブランチ最終コミット"
+branch feature/xxxx
+commit id:"ユーザーディレクトリ追加コミット"
+```
+
 VSCodeのターミナルでコマンドを1行ずつ打っていきます。
 
 ---
