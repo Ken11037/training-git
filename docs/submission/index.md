@@ -80,15 +80,20 @@ VSCodeを使用した提出例です。
 - [コミットルール](#コミットルール)を確認していること
 - [VSCodeでの課題提出例](#vscodeでの課題提出例)を参考にアップすること
 - `02_basic` 内のファイルのみコミットを行うこと
-- `02_basic/htdocs/css/reset.css` が変更されていないこと
-- `02_basic/htdocs/css/common.css` にページ固有のスタイルが入っていないこと
-  - 例えばモーダル関連のスタイルや `#change_btn` 等
-- TODOコメントが全て削除されていること
-- `kadai_07.html` 用のJavaScriptおよびスタイルが他ページに適用されないこと
-- `kadai_08.html` 用のJavaScriptおよびスタイルが他ページに適用されないこと
-- 全ページのデザインが統一されていること
+- Excel課題
+  - ファイル名が `kadai.xlsx` になっていること
+  - 「売上管理票」のP列まで条件式が入っていること
+  - 「成績表」の条件式に誤りがないこと
+- jQuery課題
+  - `02_basic/htdocs/css/reset.css` が変更されていないこと
+  - `02_basic/htdocs/css/common.css` にページ固有のスタイルが入っていないこと
+    - 例えばモーダル関連のスタイルや `#change_btn` 等
+  - TODOコメントが全て削除されていること
+  - `kadai_07.html` 用のJavaScriptおよびスタイルが他ページに適用されないこと
+  - `kadai_08.html` 用のJavaScriptおよびスタイルが他ページに適用されないこと
+  - 全ページのデザインが統一されていること
 
-画面表示例です。  
+jQuery課題の画面表示例です。  
 
 - `02_basic/htdocs/index.html`  
   ![index.png](./images/02_basic/index.png)  
