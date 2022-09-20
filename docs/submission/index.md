@@ -8,6 +8,7 @@
 | 4 | [マークアップエンジニア編課題](#マークアップエンジニア編課題) |
 | 5 | [フロントエンドエンジニア編課題](#フロントエンドエンジニア編課題) |
 | 6 | [バックエンド編課題](#バックエンド編課題) |
+| 7 | [バージョン管理システム編課題](#バージョン管理システム編課題) |
 
 ## コミットルール
 
@@ -61,6 +62,15 @@ VSCodeを使用した提出例です。
     - 横幅:`1024px` で表示が崩れないこと
     - 横幅:`1024px` で横スクロールが出来ないこと
 
+```mermaid
+%%{init: {'gitGraph':{'mainBranchName':'template'}}}%%
+gitGraph
+commit id:" "
+branch feature/xxxx
+commit id:"ユーザーディレクトリ追加コミット"
+commit id:"コーダー編課題追加コミット" type: HIGHLIGHT
+```
+
 ---
 
 ## マークアップエンジニア編課題
@@ -101,6 +111,16 @@ jQuery課題の画面表示例です。
   ![index.png](./images/02_basic/kadai_07.png)  
 - `02_basic/htdocs/kadai_08.html`  
   ![index.png](./images/02_basic/kadai_08.png)  
+
+```mermaid
+%%{init: {'gitGraph':{'mainBranchName':'template'}}}%%
+gitGraph
+commit id:" "
+branch feature/xxxx
+commit id:"ユーザーディレクトリ追加コミット"
+commit id:"コーダー編課題追加コミット"
+commit id:"マークアップエンジニア編課題追加コミット" type: HIGHLIGHT
+```
 
 ---
 
@@ -145,6 +165,16 @@ jQuery課題の画面表示例です。
 
 **※ CBCのソースコードのコピーではうまくいかない部分もあるので、レビュー依頼前に自身でテストしましょう。**
 
+```mermaid
+%%{init: {'gitGraph':{'mainBranchName':'template'}}}%%
+gitGraph
+commit id:" "
+branch feature/xxxx
+commit id:"ユーザーディレクトリ追加コミット"
+commit id:"コーダー編課題追加コミット"
+commit id:"フロントエンドエンジニア編課題追加コミット" type: HIGHLIGHT
+```
+
 ---
 
 ## バックエンド編課題
@@ -168,3 +198,48 @@ jQuery課題の画面表示例です。
     - ルーティングに関しては、Sortableにdelete等が追加されることも想定すること
 
 **※ CBCのソースコードのコピーではうまくいかない部分もあるので、レビュー依頼前に自身でテストしましょう。**
+
+```mermaid
+%%{init: {'gitGraph':{'mainBranchName':'template'}}}%%
+gitGraph
+commit id:" "
+branch feature/xxxx
+commit id:"ユーザーディレクトリ追加コミット"
+commit id:"コーダー編課題追加コミット"
+commit id:"フロントエンドエンジニア編課題追加コミット"
+commit id:"バックエンド編課題追加コミット" type: HIGHLIGHT
+```
+
+## バージョン管理システム編課題
+
+ここまで課題をアップしてきた自分のFeatureブランチを  
+`main` ブランチへマージするPR(Pull Request)を出しましょう。
+
+- 「Compare changes」画面
+  1. <https://github.com/epkotsoftware/training/compare/main...feature/{user}>
+  1. ブランチを `base: main ← compare: feature/{★ユーザー名}` に設定してください。
+  1. 「Create pull request」ボタンを押下してください。「Open a pull request」画面に遷移します。
+- 「Open a pull request」画面
+  1. 「Title」を「【バージョン管理システム編課題】」等、適当に入力してください。
+  1. 「Reviewers」講師を選択しましょう。
+  1. 「Assignees」に自分を選択しましょう。
+  1. 「Create pull request」ボタンを押下してください。
+- 研修講師へ、レビュー依頼をしてください。
+- 問題なければ研修講師がマージ＆Featureブランチを削除します。
+  - 今後もtrainingリポジトリの自分のユーザーディレクトリを使用したい場合は`main`ブランチをお使いください。
+
+```mermaid
+%%{init: {'gitGraph':{'mainBranchName':'template'}}}%%
+gitGraph
+commit id:" "
+branch feature/xxxx
+branch main
+checkout feature/xxxx
+commit id:"ユーザーディレクトリ追加コミット"
+commit id:"コーダー編課題追加コミット"
+commit id:"フロントエンドエンジニア編課題追加コミット"
+commit id:"バックエンド編課題追加コミット"
+commit id:"課題修正コミット"
+checkout main
+merge feature/xxxx
+```
