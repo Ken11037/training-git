@@ -172,6 +172,7 @@ commit id:" "
 branch feature/xxxx
 commit id:"ユーザーディレクトリ追加コミット"
 commit id:"コーダー編課題追加コミット"
+commit id:"マークアップエンジニア編課題追加コミット"
 commit id:"フロントエンドエンジニア編課題追加コミット" type: HIGHLIGHT
 ```
 
@@ -206,6 +207,7 @@ commit id:" "
 branch feature/xxxx
 commit id:"ユーザーディレクトリ追加コミット"
 commit id:"コーダー編課題追加コミット"
+commit id:"マークアップエンジニア編課題追加コミット"
 commit id:"フロントエンドエンジニア編課題追加コミット"
 commit id:"バックエンド編課題追加コミット" type: HIGHLIGHT
 ```
@@ -237,6 +239,7 @@ branch main
 checkout feature/xxxx
 commit id:"ユーザーディレクトリ追加コミット"
 commit id:"コーダー編課題追加コミット"
+commit id:"マークアップエンジニア編課題追加コミット"
 commit id:"フロントエンドエンジニア編課題追加コミット"
 commit id:"バックエンド編課題追加コミット"
 commit id:"課題修正コミット"
