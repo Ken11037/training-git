@@ -178,8 +178,23 @@ git push -u origin feature/{★ユーザー名}
 
 - 技術者マッチングサイトの開発
   - <https://github.com/epkotsoftware/dev-it-matching>
-- 勤怠管理・労務管理システムの開発
+- 勤怠管理・労務管理システムの開発（社内システム）
   - <https://github.com/epkotsoftware/internal-system>
+  - 別会社の勤怠システムも参考になります。
+    - デモサイト
+      - `Web勤怠システム オツトメ！ ログイン`
+        - <https://demo.otsutome.net/demo/login>
+      - `MosP(モスプ) デモサイト 勤怠管理`
+        - <https://mosp.jp/?page_id=66>
+    - 操作マニュアル
+      - `Web勤怠システム オツトメ！ チュートリアル`
+        - <https://otsutome.net/tutorial#index-1>
+      - `MosP(モスプ) 資料ダウンロードページ`
+        - <https://mosp.jp/?page_id=219>
+      - `intra-mart Accel Kaiden! 勤務管理 / ユーザ操作ガイド`
+        - <https://document.intra-mart.jp/library/iak/public/kaiden_labormgr_user_guide/index.html>
+      - `intra-mart Accel Kaiden! 勤務管理 / 管理者操作ガイド 5. マスタ設定`
+        - <https://document.intra-mart.jp/library/iak/public/kaiden_labormgr_administrator_guide/texts/master/index.html>
 - 助成金申請向けWeb診断サイトの開発
   - <https://github.com/epkotsoftware/dev-subsidy>
 - 薬剤師会向けWeb報告システムの開発
@@ -194,27 +209,3 @@ git push -u origin feature/{★ユーザー名}
 
 - 設計書のテンプレート・例
   - <https://github.com/epkotsoftware/dev-proposal/tree/main/template/docs>
-
-## 研修講師
-
-### Osanai Seiya
-
-- 1983年生まれ
-- 経歴
-  - 情報系専門学校卒
-  - 2009/08 : 異業種からプログラマーへ
-    - 企画、PM、PL、TL、設計、開発、教育 を経験
-  - 2021/10 : 研修担当へ
-- 設計・開発経験
-  - 分野
-    - 某音楽配信サービス バックエンド
-    - 金融システム
-    - 投資信託WEBシステム
-    - フレームワーク開発 (C#)
-    - GIS（地理情報システム） デスクトップアプリ・スマートフォンアプリ・WEB
-    - ハンディーターミナルアプリ
-  - 言語
-    - PHP、JavaScript、C++、Java、C#、VB.Net、VBA、VB6、Objective-C
-- paizaランク: S
-  - S007:データヒストグラム
-    - <https://paiza.jp/challenges/share/aMxI67x_JMR11X__1hCPMP6hwjXNx35CHC6xfMwgOyw?campaign=127&source=social>
