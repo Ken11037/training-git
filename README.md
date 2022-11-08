@@ -186,11 +186,15 @@ git push -u origin feature/{★ユーザー名}
         - <https://demo.otsutome.net/demo/login>
       - `MosP(モスプ) デモサイト 勤怠管理`
         - <https://mosp.jp/?page_id=66>
+      - `RecoRu - レコルデモサイト`
+        - <https://demo.recoru.in/ap/demo/?utm_source=recoru_hp&utm_medium=referral&utm_campaign=header_to_demo>
     - 操作マニュアル
       - `Web勤怠システム オツトメ！ チュートリアル`
         - <https://otsutome.net/tutorial#index-1>
       - `MosP(モスプ) 資料ダウンロードページ`
         - <https://mosp.jp/?page_id=219>
+      - `RecoRu - レコルオンラインマニュアル`
+        - <https://app.recoru.in/manual/index.html>
       - `intra-mart Accel Kaiden! 勤務管理 / ユーザ操作ガイド`
         - <https://document.intra-mart.jp/library/iak/public/kaiden_labormgr_user_guide/index.html>
       - `intra-mart Accel Kaiden! 勤務管理 / 管理者操作ガイド 5. マスタ設定`
