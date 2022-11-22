@@ -274,13 +274,6 @@ commit id:"バックエンド編課題追加コミット" type: HIGHLIGHT
   1. 「Create pull request」ボタンを押下してください。
 - 研修講師へ、レビュー依頼をしてください。
 
-```txt
-レビューで問題なければ研修講師がマージ＆Featureブランチを削除します。
-今後もtrainingリポジトリの自分のユーザーディレクトリを使用したい場合は`main`ブランチをお使いください。
-（切り替え方はGit編で学習しましょう）
-コミットしたい場合は、再度featureブランチを作成し、PRを出してください。
-```
-
 ```mermaid
 %%{init: {'gitGraph':{'mainBranchName':'template'}}}%%
 gitGraph
@@ -296,4 +289,13 @@ commit id:"バックエンド編課題追加コミット"
 commit id:"課題修正コミット"
 checkout main
 merge feature/xxxx
+```
+
+### バージョン管理システム編課題マージ後
+
+```txt
+レビューで問題なければ研修講師がマージ＆Featureブランチを削除します。
+今後もtrainingリポジトリの自分のユーザーディレクトリを使用したい場合は`main`ブランチをお使いください。
+（切り替え方はGit編で学習しましょう）
+コミットしたい場合は、再度featureブランチを作成し、PRを出してください。
 ```
