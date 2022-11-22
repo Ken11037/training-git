@@ -121,7 +121,8 @@ commit id:"コーダー編課題追加コミット" type: HIGHLIGHT
     - 例えばモーダル関連のスタイルや `#change_btn` など
   - TODOコメントが全て削除されていること
   - `kadai_07.html` 用のJavaScriptおよびスタイルが他ページに適用されないこと
-  - `kadai_08.html` 用のJavaScriptおよびスタイルが他ページに適用されないこと
+  - `kadai_08.html` 用のJavaScriptおよびスタイルが他ページに適用されないこと  
+    **※ よくあるミスとしては、作成したstyle.cssをkadai_07.html、kadai_08.htmlの両方で参照させていたりします。**
   - 全ページのデザインが統一されていること
 
 jQuery課題の画面表示例です。  
