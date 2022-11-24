@@ -199,8 +199,25 @@ git push -u origin feature/{★ユーザー名}
         - <https://document.intra-mart.jp/library/iak/public/kaiden_labormgr_user_guide/index.html>
       - `intra-mart Accel Kaiden! 勤務管理 / 管理者操作ガイド 5. マスタ設定`
         - <https://document.intra-mart.jp/library/iak/public/kaiden_labormgr_administrator_guide/texts/master/index.html>
-- 助成金申請向けWeb診断サイトの開発
-  - <https://github.com/epkotsoftware/dev-subsidy>
+- アンケートサイト
+  - アンケートサイトはアンケート内容を変更するだけなので  
+    助成金申請向けWeb診断サイトの画面イメージや、様々なアンケート調査結果を参考にしてください。
+  - 対象
+    - 助成金申請向けWeb診断サイトの開発
+    - 生命保険会社向けデータ集計機能の開発
+    - 金融機関向け住宅ローン利用状況集計システムの改修
+    - 証券会社利用分析システムの改修
+  - 情報
+    - 助成金申請向けWeb診断サイトの開発（画面イメージ・モックあり）
+      - <https://github.com/epkotsoftware/dev-subsidy>
+    - 住宅ローンの利用に関するアンケート調査（第8回）
+      - <https://myel.myvoice.jp/products/detail.php?product_id=22512>
+    - 生命保険の加入実態に関するアンケート調査（第12回）
+      - <https://myel.myvoice.jp/products/detail.php?product_id=28809>
+    - 証券会社の利用に関するアンケート調査（第8回）
+      - <https://myel.myvoice.jp/products/detail.php?product_id=25907>
+    - 貯金に関するアンケート調査
+      - <https://myel.myvoice.jp/products/detail.php?product_id=17310>
 - 薬剤師会向けWeb報告システムの開発
   - <https://github.com/epkotsoftware/dev-proposal/tree/main/pre-avoid>
 - 顧客管理システムの開発
