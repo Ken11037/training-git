@@ -82,6 +82,8 @@ VSCodeを使用した提出例です。
       - 画像がはみ出していないこと
     - 横幅:`1024px` で横スクロールが出来ないこと
 
+### コーダー編 Git graph
+
 ```mermaid
 %%{init: {'gitGraph':{'mainBranchName':'template'}}}%%
 gitGraph
@@ -123,9 +125,9 @@ commit id:"コーダー編課題追加コミット" type: HIGHLIGHT
   - `kadai_07.html` 用のJavaScriptおよびスタイルが他ページに適用されないこと
   - `kadai_08.html` 用のJavaScriptおよびスタイルが他ページに適用されないこと  
     **※ よくあるミスとしては、作成したstyle.cssをkadai_07.html、kadai_08.htmlの両方で参照させていたりします。**
-  - 全ページのデザインが統一されていること
+  - 全ページのデザインが統一されていること（デザインは[jQuery課題画面](#jquery課題画面)参照）
 
-jQuery課題の画面表示例です。  
+### jQuery課題画面
 
 - `02_basic/htdocs/index.html`  
   ![index.png](./images/02_basic/index.png)  
@@ -133,6 +135,8 @@ jQuery課題の画面表示例です。
   ![index.png](./images/02_basic/kadai_07.png)  
 - `02_basic/htdocs/kadai_08.html`  
   ![index.png](./images/02_basic/kadai_08.png)  
+
+### マークアップエンジニア編 Git graph
 
 ```mermaid
 %%{init: {'gitGraph':{'mainBranchName':'template'}}}%%
@@ -173,20 +177,26 @@ commit id:"マークアップエンジニア編課題追加コミット" type: H
 | 画面 | テスト項目 |
 | --- | --- |
 | `03_advanced/htdocs/index.php`<br>(`#1 PHPとjsで簡単なアプリを作ってみよう 〜`) | 【表示】余計なコメントなどが画面上に表示されていないこと |
-| 〃 | 【表示】男性・女性で見た目が分かれていること |
+| 〃 | 【表示】男性・女性で見た目が分かれていること（[画面イメージ参照](#フロントエンドエンジニア編課題-画面)） |
 | 〃 | 【登録ボタン】男性での登録が可能なこと |
 | 〃 | 【登録ボタン】女性での登録が可能なこと |
 | 〃 | 【ドラッグ】移動することが出来、DBも更新されること |
 | `03_advanced/htdocs/sortable2/index.php`<br>(`#11 PHPでClassクラスを理解するための準備`) | 【表示】余計なコメントなどが画面上に表示されていないこと |
-| 〃 | 【表示】男性・女性で見た目が分かれていること |
+| 〃 | 【表示】男性・女性で見た目が分かれていること（[画面イメージ参照](#フロントエンドエンジニア編課題-画面)） |
 | 〃 | 【登録ボタン】男性での登録が可能なこと |
 | 〃 | 【登録ボタン】女性での登録が可能なこと |
 | 〃 | 【ドラッグ】移動することが出来、DBも更新されること |
 | `03_advanced/htdocs/sortable3/index.php`<br>(`#12 PHPアプリケーションをクラス化してみよう`) | 【表示】余計なコメントなどが画面上に表示されていないこと |
-| 〃 | 【表示】男性・女性で見た目が分かれていること |
+| 〃 | 【表示】男性・女性で見た目が分かれていること（[画面イメージ参照](#フロントエンドエンジニア編課題-画面)） |
 | 〃 | 【登録ボタン】男性での登録が可能なこと |
 | 〃 | 【登録ボタン】女性での登録が可能なこと |
 | 〃 | 【ドラッグ】移動することが出来、DBも更新されること |
+
+#### フロントエンドエンジニア編課題 画面
+
+![sortable.png](./images/03_advanced/sortable.png)  
+
+### フロントエンドエンジニア編 Git graph
 
 ```mermaid
 %%{init: {'gitGraph':{'mainBranchName':'template'}}}%%
@@ -239,6 +249,8 @@ commit id:"フロントエンドエンジニア編課題追加コミット" type
 | 〃 | 【登録ボタン】入力されたタスク名がテーブルに登録されること |
 | 〃 | 【完了ボタン】対象レコードがテーブルから削除されること |
 
+### バックエンド編 Git graph
+
 ```mermaid
 %%{init: {'gitGraph':{'mainBranchName':'template'}}}%%
 gitGraph
@@ -274,6 +286,8 @@ commit id:"バックエンド編課題追加コミット" type: HIGHLIGHT
   1. 「Assignees」に自分を選択しましょう。
   1. 「Create pull request」ボタンを押下してください。
 - 研修講師へ、レビュー依頼をしてください。
+
+### バージョン管理システム編 Git graph
 
 ```mermaid
 %%{init: {'gitGraph':{'mainBranchName':'template'}}}%%
