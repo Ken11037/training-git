@@ -7,13 +7,4 @@
 
 ## ブランチ確認方法
 
-以下のコマンドで確認できます。  
-「`*`」がついているブランチ名が現在のブランチです。
-
-```bash
-git branch
-```
-
-Git Bash を使用している場合はディレクトリパスの後ろに「`(ブランチ名)`」が表示されます。
-
-![git_branch](./../../../images/01_beginner/git_branch.png)
+- [こちらを参照](https://github.com/epkotsoftware/training-docs/blob/main/training/git/README.md)
