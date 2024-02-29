@@ -8,3 +8,7 @@
 - [ ] 「Title」入力
 - [ ] 「Reviewers」設定
 - [ ] 「Assignees」設定
+
+確認後は上記にチェックを必ずつけましょう。  
+
+- 参考: [タスクリストの作成](https://docs.github.com/ja/get-started/writing-on-github/working-with-advanced-formatting/about-task-lists#creating-task-lists)
