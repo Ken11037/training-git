@@ -1,1 +1,161 @@
-<!-- TODO: kadai_07.html と同様に作成 -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTH-8">
+  <title>CBC jQuery</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/common.css">
+  <style>
+    section {
+      margin-bottom: 30px;
+    }
+    input[type="number"] {
+      width: 60px;
+    }
+    #calc, #calc_pi, #tax, #tax_console {
+      margin: 20px 0;
+      font-size: 18px;
+    }
+    .modal-open {
+      padding: 10px 20px;
+      border: 1px solid #000;
+      display: inline-block;
+      background: #eee;
+      cursor: pointer;
+    }
+    .modal-content {
+      display: none;
+      position: fixed;
+      width: 80%;
+      height: 200px;
+      padding: 10px 20px;
+      color: #333;
+      background: #ccc;
+      overflow-y: auto;
+      border-radius: 1em;
+      z-index: 100;
+    }
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 120%;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 99;
+    }
+  </style>
+  <script src="https://code.jquery.com/jQuery-3.6.0.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>マークアップエンジニア編課題：#8 変数を使う ～ #11 モーダルウィンドウを作ろう</h1>
+  </header>
+  <main>
+    <section>
+      <h2>#8. 変数を使う 足し算してみる</h2>
+      <div id="calc">
+        <input class="number_A" type="number"> +
+        <input class="number_B" type="number"> =
+        <span id="number_total"></span>
+      </div>
+    </section>
+
+    <section>
+      <h2>#8.変数を使う 整数の円周を計算できる計算機を作ってみましょう。</h2>
+      <div id="calc_pi">
+        <input class="number_C" type="number" style="width:50px;"> cm × 3.14 =
+        <span id="pi"></span> cm
+      </div>
+    </section>
+
+    <section>
+      <h2>#9.関数を使う</h2>
+      <div id="tax">
+        <input class="ex_price"> 消費税: <span class="ex_tax"></span> 円
+      </div>
+    </section>
+
+    <section>
+      <h2>#10.コンソールでデータの確認</h2>
+      <div id="tax_console">
+        <input class="ex_price_console"> 消費税: <span class="ex_tax_console"></span> 円
+      </div>
+    </section>
+
+    <section>
+      <h2>#11.モーダルウィンドウを作ろう</h2>
+      <div class="modal-open">モーダル起動!</div>
+      <div class="modal-content">
+        モーダルウィンドウの中身<br>
+        モーダルウィンドウの中身
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // 足し算
+    $('#calc').on('input', function () {
+      const a = parseInt($('.number_A').val()) || 0;
+      const b = parseInt($('.number_B').val()) || 0;
+      $('#number_total').text(a + b);
+    });
+
+    // 円周計算
+    $('#calc_pi').on('change', function () {
+      const diameter = parseFloat($('.number_C').val()) || 0;
+      const pi = diameter * 3.14;
+      $('#pi').text(pi.toFixed(2));
+    });
+
+    // 消費税の関数
+    function tax(price) {
+      const TAX = 0.08;
+      return Math.round(price * TAX);
+    }
+
+    // 消費税①
+    $('#tax').on('change', function () {
+      const price = parseInt($('.ex_price').val()) || 0;
+      $('.ex_tax').text(tax(price));
+    });
+
+    // 消費税②（console付き）
+    $('#tax_console').on('change', function () {
+      const price = parseInt($('.ex_price_console').val()) || 0;
+      const floatTax = price * 0.08;
+      console.log(floatTax);
+      $('.ex_tax_console').text(tax(price));
+    });
+
+    // モーダル
+    $('.modal-open').on('click', function () {
+      if ($('.modal-overlay').length === 0) {
+        $('body').append('<div class="modal-overlay"></div>');
+      }
+      $('.modal-content, .modal-overlay').fadeIn('slow');
+
+      $('.modal-overlay').on('click', function () {
+        $('.modal-content, .modal-overlay').fadeOut('slow', function () {
+          $('.modal-overlay').remove();
+        });
+      });
+
+      function modalResize() {
+        const w = $(window).width();
+        const h = $(window).height();
+        const cw = $('.modal-content').outerWidth();
+        const ch = $('.modal-content').outerHeight();
+        $('.modal-content').css({
+          left: ((w - cw) / 2) + 'px',
+          top: ((h - ch) / 2) + 'px'
+        });
+      }
+
+      modalResize();
+      $(window).on('resize', modalResize);
+    });
+  </script>
+</body>
+</html>
