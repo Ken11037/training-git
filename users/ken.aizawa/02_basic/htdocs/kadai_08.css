@@ -1,0 +1,91 @@
+#change_btn {
+  width: 200px;
+  padding: 10px 0;
+  text-align: center;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+#text {
+  padding: 10px;
+  border: 1px solid #000;
+}
+#box {
+  padding: 10px;
+  border: 1px solid #000;
+}
+.hover_off {
+  color: #000;
+  background: #fff;
+}
+.hover_on {
+  color: #fff;
+  background: #0094d7;
+}
+.accordion > li > div {
+  padding: 10px;
+  background-color: #0094d7;
+  cursor: pointer;
+}
+.accordion_inner {
+  display: none;
+  padding: 10px;
+  background: #fff;
+}
+.pageTop_btn {
+  width: 60px;
+  height: 60px;
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  cursor: pointer;
+}
+.tooltips {
+  position: absolute;
+  top: 40px;
+  color: #fff;
+  background-color: #51A2C1;
+  border-radius: 0.6em;
+  z-index: 100;
+}
+.tooltips::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 15px;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #51A2C1;
+  border-left: 10px solid transparent;
+}
+.modal-open{
+  padding:20px;
+  border: 1px solid #000;
+  display:inline-block;
+}
+.modal-content {
+  display: none;
+  position: fixed;
+  width: 80%;
+  height:200px;
+  padding: 10px 20px;
+  color: #333;
+  background: #ccc;
+  overflow-y: auto;
+  border-radius: 1em;
+  z-index: 100;
+}
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 99;
+}
+.modal-open {
+  display: block;
+  width: fit-content;
+  margin: 40px auto;
+}
