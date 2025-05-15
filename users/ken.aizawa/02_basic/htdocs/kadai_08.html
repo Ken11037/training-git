@@ -5,9 +5,9 @@
   <title>CBC jQuery</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="kadai_08.css">
+<link rel="stylesheet" href="css/kadai_08.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="kadai_08.js"></script>
+  <script src="script.js"></script>
 </head>
 
 <body>
@@ -55,69 +55,69 @@
       </div>
     </section>
   </main>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(function () {
 
-  <script>
-    // 足し算
-    $('#calc').on('input', function () {
-      const a = parseInt($('.number_A').val()) || 0;
-      const b = parseInt($('.number_B').val()) || 0;
-      $('#number_total').text(a + b);
-    });
+  $('#calc').on('input', function () {
+    const a = parseInt($('.number_A').val()) || 0;
+    const b = parseInt($('.number_B').val()) || 0;
+    $('#number_total').text(a + b);
+  });
 
-    // 円周計算
-    $('#calc_pi').on('change', function () {
-      const diameter = parseFloat($('.number_C').val()) || 0;
-      const pi = diameter * 3.14;
-      $('#pi').text(pi.toFixed(2));
-    });
+  $('#calc_pi').on('change', function () {
+    const diameter = parseFloat($('.number_C').val()) || 0;
+    const pi = diameter * 3.14;
+    $('#pi').text(pi.toFixed(2));
+  });
 
-    // 消費税の関数
-    function tax(price) {
-      const TAX = 0.08;
-      return Math.round(price * TAX);
+  function tax(price) {
+    const TAX = 0.08;
+    return Math.round(price * TAX);
+  }
+
+  $('#tax').on('change', function () {
+    const price = parseInt($('.ex_price').val()) || 0;
+    $('.ex_tax').text(tax(price));
+  });
+
+  $('#tax_console').on('change', function () {
+    const price = parseInt($('.ex_price_console').val()) || 0;
+    const floatTax = price * 0.08;
+    console.log(floatTax);
+    $('.ex_tax_console').text(tax(price));
+  });
+
+  $('.modal-open').on('click', function () {
+    if ($('.modal-overlay').length === 0) {
+      $('body').append('<div class="modal-overlay"></div>');
     }
 
-    // 消費税①
-    $('#tax').on('change', function () {
-      const price = parseInt($('.ex_price').val()) || 0;
-      $('.ex_tax').text(tax(price));
-    });
+    $('.modal-content, .modal-overlay').fadeIn('slow');
 
-    // 消費税②（console付き）
-    $('#tax_console').on('change', function () {
-      const price = parseInt($('.ex_price_console').val()) || 0;
-      const floatTax = price * 0.08;
-      console.log(floatTax);
-      $('.ex_tax_console').text(tax(price));
-    });
-
-    // モーダル
-    $('.modal-open').on('click', function () {
-      if ($('.modal-overlay').length === 0) {
-        $('body').append('<div class="modal-overlay"></div>');
-      }
-      $('.modal-content, .modal-overlay').fadeIn('slow');
-
-      $('.modal-overlay').on('click', function () {
-        $('.modal-content, .modal-overlay').fadeOut('slow', function () {
-          $('.modal-overlay').remove();
-        });
+    $('.modal-overlay').on('click', function () {
+      $('.modal-content, .modal-overlay').fadeOut('slow', function () {
+        $('.modal-overlay').remove();
       });
-
-      function modalResize() {
-        const w = $(window).width();
-        const h = $(window).height();
-        const cw = $('.modal-content').outerWidth();
-        const ch = $('.modal-content').outerHeight();
-        $('.modal-content').css({
-          left: ((w - cw) / 2) + 'px',
-          top: ((h - ch) / 2) + 'px'
-        });
-      }
-
-      modalResize();
-      $(window).on('resize', modalResize);
     });
-  </script>
+
+    function modalResize() {
+      const w = $(window).width();
+      const h = $(window).height();
+      const cw = $('.modal-content').outerWidth();
+      const ch = $('.modal-content').outerHeight();
+      $('.modal-content').css({
+        left: ((w - cw) / 2) + 'px',
+        top: ((h - ch) / 2) + 'px'
+      });
+    }
+
+    modalResize();
+    $(window).on('resize', modalResize);
+  });
+
+});
+</script>
+
 </body>
 </html>

@@ -42,5 +42,4 @@ services:
       - "TZ=Asia/Tokyo"
     restart: always
 volumes:
-  mysql_data_volume:
-    name: "${NAME_PREFIX}-mysql-volume"
+  - "../htdocs:/var/www/html"
