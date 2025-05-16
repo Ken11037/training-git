@@ -41,5 +41,5 @@ services:
       - "PMA_PASSWORD=${DB_ROOT_PASSWORD}" # db -> environment -> MYSQL_ROOT_PASSWORD
       - "TZ=Asia/Tokyo"
     restart: always
-volumes:
-  - "../htdocs:/var/www/html"
+  mysql_data_volume:
+    name: "${NAME_PREFIX}-mysql-volume"
