@@ -1,0 +1,27 @@
+<?php
+require_once('../config/config.php');  /* DB接続用のファイルを読み込む */
+
+/* AjaxでPOSTされた座標情報をDBに更新 */
+if(!empty($_POST['left'])){
+  try{
+    $sql  = '
+            UPDATE
+              sortable
+            SET
+              left_x = :LEFT,
+              top_y  = :TOP
+            WHERE
+              id = :NUMBER
+            ';
+    $stmt = $dbh->prepare($sql);
+    $stmt->bindValue(':LEFT'  , (int)$_POST['left'], PDO::PARAM_INT);
+    $stmt->bindValue(':TOP'   , (int)$_POST['top'],  PDO::PARAM_INT);
+    $stmt->bindValue(':NUMBER', (int)$_POST['id'],   PDO::PARAM_INT);
+    $stmt->execute();
+
+    /* 処理終了後に前のページに戻る */
+    header('location:'.$_SERVER["HTTP_REFERER"]);
+  } catch (PDOException $e) {
+    echo $e->getMessage();
+  }
+}

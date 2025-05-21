@@ -1,0 +1,4 @@
+PDOStatement Object
+(
+    [queryString] => UPDATE `sortable` SET `left_x` = :LEFT, `top_y` = :TOP WHERE `id` = :NUMBER
+)
