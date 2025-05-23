@@ -1,21 +1,9 @@
 <?php
-require_once('./config/config.php');
+require_once('./sortable2/config/config.php');  // パスを構造に合わせて修正
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $name = $_POST['inputName'] ?? '';
-    $gender_id = $_POST['inputGender'] ?? 1;
+// POST処理（略、先ほどのコード参照）
 
-    if ($name !== '') {
-        $sql = "INSERT INTO sortable (name, gender_id, left_x, top_y) VALUES (:name, :gender_id, 0, 0)";
-        $stmt = $dbh->prepare($sql);
-        $stmt->bindValue(':name', $name, PDO::PARAM_STR);
-        $stmt->bindValue(':gender_id', $gender_id, PDO::PARAM_INT);
-        $stmt->execute();
-
-        header('Location: ' . $_SERVER['PHP_SELF']);
-        exit;
-    }
-}
+// 省略、前回お渡しした内容をそのまま使う形でOK
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -24,15 +12,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <title>Sortable_Comp</title>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
-  <script src="js/sort.js"></script>
-    <link href="css/style.css" rel="stylesheet">  <!-- CSS 読み込み -->
+  <script src="sortable2/js/sort.js"></script>   <!-- パスを変更 -->
+  <link href="css/style.css" rel="stylesheet">  <!-- htdocs直下cssフォルダ -->
 </head>
 <body>
-<div id="wrapper">
-  <div id="input_form">
-    <form action="" method="POST">
-      <input type="text" name="inputName" placeholder="新メンバー名を入力" required>
-      <?php
+  <div id="wrapper">
+    <div id="input_form">
+      <form action="" method="POST">
+        <input type="text" name="inputName" placeholder="新メンバー名を入力" required>
+        <?php
         $sql    = 'SELECT * FROM genders';
         $stmt   = $dbh->query($sql);
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -40,13 +28,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           $checked = ($val['id'] == 1) ? ' checked="checked"' : '';
           echo '<input type="radio" name="inputGender" value="'.$val['id'].'"' . $checked . '>'.$val['gender'].PHP_EOL;
         }
-      ?>
-      <input type="submit" value="登録">
-    </form>
-  </div>
+        ?>
+        <input type="submit" value="登録">
+      </form>
+    </div>
 
-  <div id="drag-area">
-  <?php
+    <div id="drag-area">
+    <?php
     $sql = '
       SELECT
         t1.*,
@@ -61,8 +49,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       echo '<p><span class="name">'.$result['id'].' '.$result['name'].' ('.$result['gender'].')</span></p>'.PHP_EOL;
       echo '</div>'.PHP_EOL;
     }
-  ?>
+    ?>
+    </div>
   </div>
-</div>
 </body>
 </html>
