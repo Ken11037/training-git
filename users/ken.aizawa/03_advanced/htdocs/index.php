@@ -1,6 +1,21 @@
 <?php
 require_once('./config/config.php');
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $name = $_POST['inputName'] ?? '';
+    $gender_id = $_POST['inputGender'] ?? 1;
+
+    if ($name !== '') {
+        $sql = "INSERT INTO sortable (name, gender_id, left_x, top_y) VALUES (:name, :gender_id, 0, 0)";
+        $stmt = $dbh->prepare($sql);
+        $stmt->bindValue(':name', $name, PDO::PARAM_STR);
+        $stmt->bindValue(':gender_id', $gender_id, PDO::PARAM_INT);
+        $stmt->execute();
+
+        header('Location: ' . $_SERVER['PHP_SELF']);
+        exit;
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -9,14 +24,14 @@ require_once('./config/config.php');
   <title>Sortable_Comp</title>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
-  <script src="js/sort.js"></script>  <!-- sort.js 読み込み -->
-  <link href="css/style.css" rel="stylesheet">  <!-- CSS 読み込み -->
+  <script src="js/sort.js"></script>
+    <link href="css/style.css" rel="stylesheet">  <!-- CSS 読み込み -->
 </head>
 <body>
 <div id="wrapper">
   <div id="input_form">
-    <form action="./function/insert.php" method="POST">  <!-- insert.php へPOST -->
-      <input type="text" name="inputName" placeholder="新メンバー名を入力">
+    <form action="" method="POST">
+      <input type="text" name="inputName" placeholder="新メンバー名を入力" required>
       <?php
         $sql    = 'SELECT * FROM genders';
         $stmt   = $dbh->query($sql);
