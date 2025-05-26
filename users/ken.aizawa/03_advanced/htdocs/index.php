@@ -15,20 +15,29 @@ try {
     exit;
 }
 
-// 新規登録
+// 新規登録（重複INSERTしないように修正済）
 if (!empty($_POST['inputName'])) {
   try {
-    $sql = 'INSERT INTO sortable(name, gender_id) VALUES(:ONAMAE, :GENDER)';
+    $randX = rand(50, 400);
+    $randY = rand(50, 300);
+    $sql = 'INSERT INTO sortable(name, gender_id, left_x, top_y)
+            VALUES(:ONAMAE, :GENDER, :X, :Y)';
     $stmt = $dbh->prepare($sql);
     $stmt->bindValue(':ONAMAE', $_POST['inputName'], PDO::PARAM_STR);
     $stmt->bindValue(':GENDER', $_POST['inputGender'], PDO::PARAM_INT);
+    $stmt->bindValue(':X', $randX, PDO::PARAM_INT);
+    $stmt->bindValue(':Y', $randY, PDO::PARAM_INT);
     $stmt->execute();
+
+    // 二重投稿防止
+    header('Location: index.php');
+    exit;
   } catch (PDOException $e) {
     echo $e->getMessage();
   }
 }
 
-// 座標更新
+// 座標更新処理
 if (!empty($_POST['left'])) {
   try {
     $sql = 'UPDATE `sortable` SET `left_x` = :LEFT, `top_y` = :TOP WHERE `id` = :NUMBER';
@@ -86,7 +95,7 @@ if (!empty($_POST['left'])) {
 <div id="wrapper">
   <div id="input_form">
     <form action="index.php" method="POST">
-      <input type="text" name="inputName" placeholder="新メンバー名を入力">
+      <input type="text" name="inputName" placeholder="新メンバー名を入力" required>
       <?php
         $sql = 'SELECT * FROM genders';
         $stmt = $dbh->query($sql);
