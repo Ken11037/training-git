@@ -1,18 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SortableController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+Route::get('/', [SortableController::class, 'index']);
+Route::post('/register', [SortableController::class, 'register']);
+Route::post('/update', [SortableController::class, 'update']);
 
-Route::get('/', function () {
-    return view('welcome');
+// ここに /task のルートを追加してください
+Route::get('/task', function () {
+    return 'タスク管理ツール';
 });
